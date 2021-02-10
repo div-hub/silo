@@ -39,8 +39,7 @@ public interface SiloTrackerRepository extends  JpaRepository<SiloTracker,Long> 
     List<SiloTracker> findAllBySiloId(String siloId);
    List<SiloTracker> findBySiloIdOrderByTimestampDesc(String siloId);
 
-   @Query("select openQuantity from SiloTracker where batchId= :#{#batchid}")
-    int checkOpenQty(String batchid);
+
 
 }
 
